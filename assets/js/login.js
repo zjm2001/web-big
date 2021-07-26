@@ -12,7 +12,7 @@ $(function(){
    })
    //从layui中获取from对象
    var form =layui.form;
-   var layer=layui. layer;
+   var layer=layui.layer;
 //    通过form.verify创建自定义效验规则
    form.verify({
     pwd: [
@@ -62,6 +62,7 @@ $(function(){
             layer.msg('登录成功!');
             //权限信息
             console.log(res.token);
+            localStorage.setItem('token', res.token)
             location.href='/index.html'
         }
     })
