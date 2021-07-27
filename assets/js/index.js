@@ -1,5 +1,5 @@
 $(function(){
-getUsreInfo()
+getUserInfo()
 //退出按钮
 var layer=layui.layer;
 $('#btnLogout').on('click',function(){
@@ -18,7 +18,7 @@ $('#btnLogout').on('click',function(){
 
 
 //获取用户基本信息函数
-function getUsreInfo(){
+function getUserInfo(){
 $.ajax({
     type: "get",
     url: "/my/userinfo",
